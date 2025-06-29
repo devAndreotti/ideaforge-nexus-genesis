@@ -102,9 +102,25 @@ const FeaturesShowcase = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+    <div className="max-w-7xl mx-auto px-6 py-16 space-y-16 relative">
+      {/* Animated background elements for this section */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Floating geometric shapes */}
+        <div className="floating-element floating-circle w-20 h-20 top-10 left-10 animate-float-slow opacity-30" style={{animationDelay: '1s'}}></div>
+        <div className="floating-element floating-circle w-16 h-16 top-1/3 right-20 animate-float-slow opacity-25" style={{animationDelay: '3s'}}></div>
+        <div className="floating-element floating-circle w-12 h-12 bottom-1/4 left-1/4 animate-float-slow opacity-35" style={{animationDelay: '5s'}}></div>
+        
+        <div className="floating-element floating-square w-8 h-8 top-1/4 left-1/3 animate-float-medium opacity-30" style={{animationDelay: '2s'}}></div>
+        <div className="floating-element floating-square w-10 h-10 top-2/3 right-1/4 animate-float-medium opacity-25" style={{animationDelay: '4s'}}></div>
+        
+        {/* Drifting particles */}
+        <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-red-400 rounded-full opacity-40 animate-drift" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/5 w-1 h-1 bg-white rounded-full opacity-60 animate-drift" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-1/3 right-1/5 w-3 h-3 bg-red-300 rounded-full opacity-30 animate-drift" style={{animationDelay: '6s'}}></div>
+      </div>
+
       {/* AI Processing Section */}
-      <div className="text-center space-y-8">
+      <div className="text-center space-y-8 relative z-10">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient">
             Processamento da IA
@@ -118,14 +134,14 @@ const FeaturesShowcase = () => {
           {features.map((feature, index) => (
             <div key={index} className="news-card group p-6 relative">
               <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30 backdrop-blur-sm">
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-black/30 text-white border border-white/20 backdrop-blur-sm">
                   {feature.category}
                 </span>
               </div>
               
               <div className="flex items-start space-x-4 mt-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 backdrop-blur-sm">
+                  <div className="w-12 h-12 rounded-xl bg-black/20 border border-white/15 flex items-center justify-center group-hover:scale-110 group-hover:bg-black/30 transition-all duration-300 backdrop-blur-sm">
                     <feature.icon className={`w-6 h-6 ${feature.color} group-hover:text-white transition-all duration-300`} />
                   </div>
                 </div>
@@ -140,14 +156,14 @@ const FeaturesShowcase = () => {
                 </div>
               </div>
 
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="absolute inset-0 bg-white/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Deliverables Section */}
-      <div className="text-center space-y-8">
+      <div className="text-center space-y-8 relative z-10">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient">
             Entregas Geradas
@@ -162,7 +178,7 @@ const FeaturesShowcase = () => {
             <div key={index} className="glass-card-premium group transition-all duration-500 hover:scale-[1.02]">
               <div className="flex items-center justify-between p-6">
                 <div className="flex items-center space-x-4 flex-1">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} border border-white/20 transition-all duration-500 group-hover:bg-white/20 group-hover:scale-110 backdrop-blur-sm`}>
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} border border-white/15 transition-all duration-500 group-hover:bg-black/25 group-hover:scale-110 backdrop-blur-sm`}>
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   
@@ -189,7 +205,7 @@ const FeaturesShowcase = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="text-center space-y-6">
+      <div className="text-center space-y-6 relative z-10">
         <div className="glass-card-premium max-w-3xl mx-auto group transition-all duration-500 hover:scale-105">
           <div className="p-8 relative">
             <div className="flex items-center justify-center gap-3 mb-6">
