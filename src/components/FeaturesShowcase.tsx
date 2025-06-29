@@ -23,42 +23,42 @@ const FeaturesShowcase = () => {
       icon: Brain,
       title: "Lore e Mundo",
       description: "Detalhamento completo da ambientação, temas centrais e sistema narrativo",
-      color: "text-creative-red-400",
+      color: "text-red-200",
       category: "Criação"
     },
     {
       icon: Users,
       title: "Personagens",
       description: "Protagonista e personagens secundários com motivações e conflitos dinâmicos",
-      color: "text-creative-ruby",
+      color: "text-red-100",
       category: "Narrativa"
     },
     {
       icon: Cog,
       title: "Mecânicas e Progressão",
       description: "Sistemas modulares, árvore de habilidades e mecânicas balanceadas",
-      color: "text-creative-fire",
+      color: "text-red-200",
       category: "Gameplay"
     },
     {
       icon: Palette,
       title: "Estética e Interface",
       description: "Estilo visual, trilha sonora e design de interface recomendados",
-      color: "text-creative-crimson",
+      color: "text-red-100",
       category: "Design"
     },
     {
       icon: TrendingUp,
       title: "Análise de Viabilidade",
       description: "Avaliação de complexidade, gargalos e versões simplificadas para protótipos",
-      color: "text-creative-red-500",
+      color: "text-red-200",
       category: "Estratégia"
     },
     {
       icon: Lightbulb,
       title: "Checklist de Produção",
       description: "Tarefas organizadas por categoria com possibilidade de exportação",
-      color: "text-creative-red-600",
+      color: "text-red-100",
       category: "Produção"
     }
   ];
@@ -68,35 +68,35 @@ const FeaturesShowcase = () => {
       icon: FileText,
       title: "documentacao.txt",
       description: "Visão geral, mapa mental e estrutura narrativa completa",
-      gradient: "from-creative-red-500 to-creative-ruby",
+      gradient: "from-white/20 to-white/10",
       time: "2 min"
     },
     {
       icon: Image,
       title: "Prompts para IA de Imagem",
       description: "Compatível com Midjourney, Leonardo.ai e DALL-E para personagens e ambientes",
-      gradient: "from-creative-ruby to-creative-fire",
+      gradient: "from-white/20 to-white/10",
       time: "3 min"
     },
     {
       icon: Code,
       title: "Prompts Técnicos",
       description: "Estruturados para GPT, Gemini, Manus IA com foco em gameplay e mecânicas",
-      gradient: "from-creative-fire to-creative-crimson",
+      gradient: "from-white/20 to-white/10",
       time: "4 min"
     },
     {
       icon: Folder,
       title: "Estrutura de Pastas",
       description: "Modelo otimizado para Unity/Godot com organização profissional",
-      gradient: "from-creative-crimson to-creative-red-600",
+      gradient: "from-white/20 to-white/10",
       time: "1 min"
     },
     {
       icon: Megaphone,
       title: "Pitch Comercial",
       description: "Texto para investidores, redes sociais e roteiro para vídeo-pitch VEO 3",
-      gradient: "from-creative-red-600 to-creative-red-500",
+      gradient: "from-white/20 to-white/10",
       time: "5 min"
     }
   ];
@@ -109,7 +109,7 @@ const FeaturesShowcase = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gradient">
             Processamento da IA
           </h2>
-          <p className="text-xl text-creative-red-200 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto font-medium">
             Nossa inteligência artificial organiza suas informações e gera um sistema completo de criação de jogos
           </p>
         </div>
@@ -118,29 +118,29 @@ const FeaturesShowcase = () => {
           {features.map((feature, index) => (
             <div key={index} className="news-card group p-6 relative">
               <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-creative-red-500/20 text-creative-red-300 border border-creative-red-500/30">
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30 backdrop-blur-sm">
                   {feature.category}
                 </span>
               </div>
               
               <div className="flex items-start space-x-4 mt-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-creative-red-500/20 to-creative-red-600/20 border border-creative-red-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className={`w-6 h-6 ${feature.color} group-hover:drop-shadow-lg transition-all duration-300`} />
+                  <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 backdrop-blur-sm">
+                    <feature.icon className={`w-6 h-6 ${feature.color} group-hover:text-white transition-all duration-300`} />
                   </div>
                 </div>
                 
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-creative-red-100 transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-white/95 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-creative-red-200 group-hover:text-creative-red-100 transition-colors duration-300 leading-relaxed">
+                  <p className="text-sm text-white/80 group-hover:text-white/90 transition-colors duration-300 leading-relaxed font-medium">
                     {feature.description}
                   </p>
                 </div>
               </div>
 
-              <div className="absolute inset-0 bg-gradient-to-br from-creative-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
             </div>
           ))}
         </div>
@@ -152,7 +152,7 @@ const FeaturesShowcase = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gradient">
             Entregas Geradas
           </h2>
-          <p className="text-xl text-creative-red-200 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto font-medium">
             Arquivos prontos para uso imediato em seu projeto de desenvolvimento
           </p>
         </div>
@@ -162,24 +162,24 @@ const FeaturesShowcase = () => {
             <div key={index} className="glass-card-premium group transition-all duration-500 hover:scale-[1.02]">
               <div className="flex items-center justify-between p-6">
                 <div className="flex items-center space-x-4 flex-1">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} bg-opacity-20 transition-all duration-500 group-hover:bg-opacity-30 group-hover:scale-110`}>
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} border border-white/20 transition-all duration-500 group-hover:bg-white/20 group-hover:scale-110 backdrop-blur-sm`}>
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   
                   <div className="flex-1 text-left">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-creative-red-100 transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-white group-hover:text-white/95 transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-creative-red-200 group-hover:text-creative-red-100 transition-colors duration-300 mt-1">
+                    <p className="text-sm text-white/80 group-hover:text-white/90 transition-colors duration-300 mt-1 font-medium">
                       {item.description}
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-3 text-sm text-creative-red-300">
+                <div className="flex items-center space-x-3 text-sm text-white/70">
                   <div className="flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse"></div>
-                    <span>{item.time}</span>
+                    <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse"></div>
+                    <span className="font-medium">{item.time}</span>
                   </div>
                 </div>
               </div>
@@ -193,22 +193,22 @@ const FeaturesShowcase = () => {
         <div className="glass-card-premium max-w-3xl mx-auto group transition-all duration-500 hover:scale-105">
           <div className="p-8 relative">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Zap className="w-8 h-8 text-creative-red-500 animate-pulse-red group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-3xl font-bold text-white group-hover:text-creative-red-100 transition-colors duration-300">
+              <Zap className="w-8 h-8 text-white/90 animate-pulse-red group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-3xl font-bold text-white group-hover:text-white/95 transition-colors duration-300">
                 Pronto para Começar?
               </h3>
-              <Sparkles className="w-8 h-8 text-creative-red-500 animate-float group-hover:scale-110 transition-transform duration-300" />
+              <Sparkles className="w-8 h-8 text-white/90 animate-float group-hover:scale-110 transition-transform duration-300" />
             </div>
             
-            <p className="text-lg text-creative-red-200 mb-8 group-hover:text-creative-red-100 transition-colors duration-300">
+            <p className="text-lg text-white/80 mb-8 group-hover:text-white/90 transition-colors duration-300 font-medium">
               Transforme sua ideia vaga em um projeto estruturado e pronto para desenvolvimento em minutos
             </p>
             
             <div className="flex items-center justify-center space-x-8 text-sm">
               {['Rápido', 'Completo', 'Profissional'].map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 text-creative-red-300 group-hover:text-creative-red-200 transition-colors duration-300">
-                  <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="font-medium">{feature}</span>
+                <div key={index} className="flex items-center gap-2 text-white/70 group-hover:text-white/85 transition-colors duration-300">
+                  <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
+                  <span className="font-semibold">{feature}</span>
                 </div>
               ))}
             </div>
