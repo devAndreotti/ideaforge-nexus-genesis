@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# 🧠 IdeaForge Nexus - Gênesis Criativa
+<p align="center">
+  <!-- Contador de linguagens -->
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/ideaforge-nexus?color=FFF&labelColor=00d4ff&style=flat-square">
+  <!-- Tamanho do repositório -->
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/devAndreotti/ideaforge-nexus?color=FFF&labelColor=00bbf9&style=flat-square">
+  <!-- Licença -->
+  <img alt="GitHub License" src="https://img.shields.io/github/license/devAndreotti/devAndreotti?color=FFF&labelColor=9b5de5&style=flat-square">
+</p>
 
-## Project info
+<div align="center">
+  <img src="./src/project-01.png" alt="Visual do IdeaForge Nexus">
+</div>
 
-**URL**: https://lovable.dev/projects/3c62b3c1-513d-4f2e-828b-c6d075d6e0e6
+## 📋 Sobre o Projeto
+O **IdeaForge Nexus** é um agente criativo de geração de projetos, construído com foco em **design de jogos, storytelling e prototipagem inteligente**. A partir de uma ideia inicial, a IA transforma dados soltos em um pacote completo de produção, contendo documentação técnica, narrativa, prompts visuais e estrutura de pastas para engines como Unity ou Godot.
 
-## How can I edit this code?
+Este projeto une a potência do **Lovable** com modelos generativos para entregar **resultados prontos para uso em minutos**.
 
-There are several ways of editing your application.
+## ⚙️ Funcionalidades Principais
+* 🧠 Geração automática de documentação narrativa e técnica
+* 🖼 Criação de prompts para IA de imagem (Midjourney, Leonardo, DALL-E)
+* 📂 Estrutura de pastas pronta para engines de desenvolvimento
+* 🎮 Planejamento de gameplay e sistema de progressão
+* 🧾 Pitch comercial para divulgação do projeto
+* 📊 Avaliação de complexidade e versões simplificadas
 
-**Use Lovable**
+## 🛠 Tecnologias Utilizadas
+* **Lovable** (IDE AI-driven com deploy instantâneo)
+* **React + TypeScript**
+* **Tailwind CSS**
+* **shadcn/ui**
+* **Vite**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c62b3c1-513d-4f2e-828b-c6d075d6e0e6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 📂 Estrutura do Projeto
 ```
+├── src/
+│   ├── components/             # Componentes reutilizáveis
+│   ├── pages/                  # Interfaces principais
+│   ├── styles/                 # Estilização global
+│   ├── prompts/                # Modelos prontos de prompt IA
+│   └── data/                   # Arquivos gerados para entrega
+├── public/                     # Recursos públicos
+├── vite.config.ts              # Configuração do Vite
+└── README.md                   # Documentação do projeto
+````
 
-**Edit a file directly in GitHub**
+## 🧭 Guia de Implementação
+### 🔹 Usando o Lovable (recomendado)
+1. Acesse o projeto em [Lovable](https://ideaforge-nexus-genesis.lovable.app)
+2. Use prompts para refinar seu agente criativo
+3. Publique via **Share > Publish**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🔹 Localmente com VSCode
+```bash
+git clone <URL_DO_REPOSITÓRIO>
+cd ideaforge-nexus
+npm install
+npm run dev
+````
 
-**Use GitHub Codespaces**
+## 🧠 Como Funciona no n8n
+* O usuário preenche um formulário inicial com a ideia
+* O front-end exibe os resultados com navegação intuitiva
+* Os dados são enviados via Webhook ao n8n
+* A IA processa e gera múltiplos arquivos:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+  * Narrativa e lore
+  * Personagens
+  * Estrutura de gameplay
+  * Prompts visuais e técnicos
+  * Documento de pitch comercial
 
-## What technologies are used for this project?
+## 📦 Arquivos Gerados
+* `documentacao.txt` - Visão geral + mapa mental + narrativa
+* `prompts-imagem.txt` - Prompts para gerar artes no Midjourney/Leonardo
+* `prompts-tecnicos.txt` - Estrutura para GPT/Gemini
+* `estrutura-pastas.md` - Organização para engines como Unity/Godot
+* `pitch-comercial.txt` - Texto para divulgação e investidores
 
-This project is built with:
+## 💡 Exemplo de Uso
+Imagine que você tenha apenas uma ideia vaga como:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+> “Um viajante preso em sonhos lúcidos precisa resolver quebra-cabeças para escapar de mundos surreais”
 
-## How can I deploy this project?
+O **IdeaForge Nexus** transforma isso em:  
+✅ Narrativa com protagonista instável, oscilando entre real e onírico  
+✅ Gameplay baseado em puzzles mentais, manipulação de tempo e percepção  
+✅ Estética visual inspirada em *Dalí* e *Paprika*  
+✅ Prompt para imagem: *“dreamlike city melting into itself with floating clocks and staircases that loop”*  
+✅ Pitch: *“Uma experiência narrativa imersiva com puzzles psicodélicos — mistura de ‘Inside’ com ‘The Eternal Castle’”*
 
-Simply open [Lovable](https://lovable.dev/projects/3c62b3c1-513d-4f2e-828b-c6d075d6e0e6) and click on Share -> Publish.
+## 💪 Como Contribuir
+1. Faça um fork deste repositório
+2. Crie uma branch: `git checkout -b feature/nova-funcionalidade`
+3. Commit: `git commit -m 'feat: adiciona nova entrega ao pipeline'`
+4. Push: `git push origin feature/nova-funcionalidade`
+5. Abra um Pull Request
 
-## Can I connect a custom domain to my Lovable project?
+## 📝 Nota
+Este projeto nasceu como uma ferramenta para **prototipagem acelerada**, focado em criadores, devs solo e entusiastas de narrativas interativas. Combinando IA, automação e design centrado na criatividade, o **IdeaForge Nexus** é seu ponto de partida para transformar ideias em realidades jogáveis.
 
-Yes, you can!
+<br>
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+<p align="center">
+  Desenvolvido com ☕ por <a href="https://github.com/seuUsuario">Ricardo Andreotti Gonçalves</a> 🧑‍💻
+</p>
