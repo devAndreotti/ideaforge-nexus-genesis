@@ -23,37 +23,43 @@ const FeaturesShowcase = () => {
       icon: Brain,
       title: "Lore e Mundo",
       description: "Detalhamento completo da ambientação, temas centrais e sistema narrativo",
-      color: "text-creative-red-400"
+      color: "text-creative-red-400",
+      category: "Criação"
     },
     {
       icon: Users,
       title: "Personagens",
       description: "Protagonista e personagens secundários com motivações e conflitos dinâmicos",
-      color: "text-creative-ruby"
+      color: "text-creative-ruby",
+      category: "Narrativa"
     },
     {
       icon: Cog,
       title: "Mecânicas e Progressão",
       description: "Sistemas modulares, árvore de habilidades e mecânicas balanceadas",
-      color: "text-creative-fire"
+      color: "text-creative-fire",
+      category: "Gameplay"
     },
     {
       icon: Palette,
       title: "Estética e Interface",
       description: "Estilo visual, trilha sonora e design de interface recomendados",
-      color: "text-creative-crimson"
+      color: "text-creative-crimson",
+      category: "Design"
     },
     {
       icon: TrendingUp,
       title: "Análise de Viabilidade",
       description: "Avaliação de complexidade, gargalos e versões simplificadas para protótipos",
-      color: "text-creative-red-500"
+      color: "text-creative-red-500",
+      category: "Estratégia"
     },
     {
       icon: Lightbulb,
       title: "Checklist de Produção",
       description: "Tarefas organizadas por categoria com possibilidade de exportação",
-      color: "text-creative-red-600"
+      color: "text-creative-red-600",
+      category: "Produção"
     }
   ];
 
@@ -62,31 +68,36 @@ const FeaturesShowcase = () => {
       icon: FileText,
       title: "documentacao.txt",
       description: "Visão geral, mapa mental e estrutura narrativa completa",
-      gradient: "from-creative-red-500 to-creative-ruby"
+      gradient: "from-creative-red-500 to-creative-ruby",
+      time: "2 min"
     },
     {
       icon: Image,
       title: "Prompts para IA de Imagem",
       description: "Compatível com Midjourney, Leonardo.ai e DALL-E para personagens e ambientes",
-      gradient: "from-creative-ruby to-creative-fire"
+      gradient: "from-creative-ruby to-creative-fire",
+      time: "3 min"
     },
     {
       icon: Code,
       title: "Prompts Técnicos",
       description: "Estruturados para GPT, Gemini, Manus IA com foco em gameplay e mecânicas",
-      gradient: "from-creative-fire to-creative-crimson"
+      gradient: "from-creative-fire to-creative-crimson",
+      time: "4 min"
     },
     {
       icon: Folder,
       title: "Estrutura de Pastas",
       description: "Modelo otimizado para Unity/Godot com organização profissional",
-      gradient: "from-creative-crimson to-creative-red-600"
+      gradient: "from-creative-crimson to-creative-red-600",
+      time: "1 min"
     },
     {
       icon: Megaphone,
       title: "Pitch Comercial",
       description: "Texto para investidores, redes sociais e roteiro para vídeo-pitch VEO 3",
-      gradient: "from-creative-red-600 to-creative-red-500"
+      gradient: "from-creative-red-600 to-creative-red-500",
+      time: "5 min"
     }
   ];
 
@@ -105,14 +116,32 @@ const FeaturesShowcase = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="glass-card group transition-all duration-500 ease-out hover:scale-105 hover:bg-white/10 hover:shadow-2xl hover:shadow-creative-red-500/25 border-white/10 hover:border-creative-red-500/30">
-              <CardContent className="p-6 text-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-creative-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <feature.icon className={`w-12 h-12 ${feature.color} mx-auto mb-4 transition-all duration-500 group-hover:scale-110 group-hover:animate-float group-hover:drop-shadow-lg relative z-10`} />
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-creative-red-100 transition-colors duration-300 relative z-10">{feature.title}</h3>
-                <p className="text-creative-red-200 text-sm group-hover:text-creative-red-100 transition-colors duration-300 relative z-10">{feature.description}</p>
-              </CardContent>
-            </Card>
+            <div key={index} className="news-card group p-6 relative">
+              <div className="absolute top-3 right-3">
+                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-creative-red-500/20 text-creative-red-300 border border-creative-red-500/30">
+                  {feature.category}
+                </span>
+              </div>
+              
+              <div className="flex items-start space-x-4 mt-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-creative-red-500/20 to-creative-red-600/20 border border-creative-red-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className={`w-6 h-6 ${feature.color} group-hover:drop-shadow-lg transition-all duration-300`} />
+                  </div>
+                </div>
+                
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-creative-red-100 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-creative-red-200 group-hover:text-creative-red-100 transition-colors duration-300 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute inset-0 bg-gradient-to-br from-creative-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+            </div>
           ))}
         </div>
       </div>
@@ -128,59 +157,63 @@ const FeaturesShowcase = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 max-w-4xl mx-auto">
+        <div className="grid gap-4 max-w-5xl mx-auto">
           {deliverables.map((item, index) => (
-            <Card key={index} className="glass-card group overflow-hidden transition-all duration-500 ease-out hover:scale-[1.02] hover:bg-white/10 hover:shadow-2xl hover:shadow-creative-red-500/20 border-white/10 hover:border-creative-red-500/40">
-              <div className={`h-1 bg-gradient-to-r ${item.gradient} transition-all duration-500 group-hover:h-2`}></div>
-              <CardHeader className="pb-2 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-creative-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <CardTitle className="flex items-center gap-3 text-left relative z-10">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} bg-opacity-20 transition-all duration-500 group-hover:bg-opacity-30 group-hover:scale-110 group-hover:shadow-lg`}>
-                    <item.icon className="w-6 h-6 text-white transition-all duration-500 group-hover:drop-shadow-lg" />
+            <div key={index} className="glass-card-premium group transition-all duration-500 hover:scale-[1.02]">
+              <div className="flex items-center justify-between p-6">
+                <div className="flex items-center space-x-4 flex-1">
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} bg-opacity-20 transition-all duration-500 group-hover:bg-opacity-30 group-hover:scale-110`}>
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-white group-hover:text-creative-red-100 transition-colors duration-300">
-                    {item.title}
-                  </span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 relative z-10">
-                <p className="text-creative-red-200 text-left group-hover:text-creative-red-100 transition-colors duration-300">{item.description}</p>
-              </CardContent>
-            </Card>
+                  
+                  <div className="flex-1 text-left">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-creative-red-100 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-creative-red-200 group-hover:text-creative-red-100 transition-colors duration-300 mt-1">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-3 text-sm text-creative-red-300">
+                  <div className="flex items-center space-x-1">
+                    <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse"></div>
+                    <span>{item.time}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
       <div className="text-center space-y-6">
-        <Card className="glass-card max-w-2xl mx-auto overflow-hidden group transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:shadow-2xl hover:shadow-creative-red-500/30">
-          <div className="h-1 bg-gradient-to-r from-creative-red-500 via-creative-ruby to-creative-fire transition-all duration-500 group-hover:h-2"></div>
-          <CardContent className="p-8 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-creative-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            <div className="flex items-center justify-center gap-3 mb-4 relative z-10">
+        <div className="glass-card-premium max-w-3xl mx-auto group transition-all duration-500 hover:scale-105">
+          <div className="p-8 relative">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <Zap className="w-8 h-8 text-creative-red-500 animate-pulse-red group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-2xl font-bold text-white group-hover:text-creative-red-100 transition-colors duration-300">Pronto para Começar?</h3>
+              <h3 className="text-3xl font-bold text-white group-hover:text-creative-red-100 transition-colors duration-300">
+                Pronto para Começar?
+              </h3>
               <Sparkles className="w-8 h-8 text-creative-red-500 animate-float group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <p className="text-creative-red-200 mb-6 group-hover:text-creative-red-100 transition-colors duration-300 relative z-10">
+            
+            <p className="text-lg text-creative-red-200 mb-8 group-hover:text-creative-red-100 transition-colors duration-300">
               Transforme sua ideia vaga em um projeto estruturado e pronto para desenvolvimento em minutos
             </p>
-            <div className="flex items-center justify-center space-x-8 text-sm text-creative-red-300 group-hover:text-creative-red-200 transition-colors duration-300 relative z-10">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
-                <span>Rápido</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
-                <span>Completo</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
-                <span>Profissional</span>
-              </div>
+            
+            <div className="flex items-center justify-center space-x-8 text-sm">
+              {['Rápido', 'Completo', 'Profissional'].map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-creative-red-300 group-hover:text-creative-red-200 transition-colors duration-300">
+                  <div className="w-2 h-2 bg-creative-red-500 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
+                  <span className="font-medium">{feature}</span>
+                </div>
+              ))}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
