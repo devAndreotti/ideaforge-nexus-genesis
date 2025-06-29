@@ -13,7 +13,8 @@ import {
   Users,
   TrendingUp,
   Lightbulb,
-  Zap
+  Zap,
+  Sparkles
 } from 'lucide-react';
 
 const FeaturesShowcase = () => {
