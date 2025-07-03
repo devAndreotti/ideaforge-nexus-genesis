@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
@@ -103,20 +102,42 @@ const FeaturesShowcase = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16 space-y-16 relative">
-      {/* Animated background elements for this section */}
+      {/* Enhanced animated background elements for this section */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Floating geometric shapes */}
+        {/* Large glowing floating circles */}
+        <div className="floating-element floating-circle-glow w-32 h-32 top-10 left-10 animate-float-glow opacity-30" style={{animationDelay: '1s'}}></div>
+        <div className="floating-element floating-circle-glow w-24 h-24 top-1/3 right-20 animate-float-glow opacity-25" style={{animationDelay: '3s'}}></div>
+        <div className="floating-element floating-circle-glow w-28 h-28 bottom-1/4 left-1/4 animate-float-glow opacity-35" style={{animationDelay: '5s'}}></div>
+        <div className="floating-element floating-circle-glow w-20 h-20 top-2/3 right-1/3 animate-float-glow opacity-28" style={{animationDelay: '7s'}}></div>
+        
+        {/* Regular floating circles */}
         <div className="floating-element floating-circle w-20 h-20 top-10 left-10 animate-float-slow opacity-30" style={{animationDelay: '1s'}}></div>
         <div className="floating-element floating-circle w-16 h-16 top-1/3 right-20 animate-float-slow opacity-25" style={{animationDelay: '3s'}}></div>
         <div className="floating-element floating-circle w-12 h-12 bottom-1/4 left-1/4 animate-float-slow opacity-35" style={{animationDelay: '5s'}}></div>
         
+        {/* Floating squares */}
         <div className="floating-element floating-square w-8 h-8 top-1/4 left-1/3 animate-float-medium opacity-30" style={{animationDelay: '2s'}}></div>
         <div className="floating-element floating-square w-10 h-10 top-2/3 right-1/4 animate-float-medium opacity-25" style={{animationDelay: '4s'}}></div>
+        <div className="floating-element floating-square w-6 h-6 bottom-1/3 left-1/5 animate-float-medium opacity-35" style={{animationDelay: '6s'}}></div>
+        <div className="floating-element floating-square w-12 h-12 top-1/2 right-1/5 animate-float-medium opacity-28" style={{animationDelay: '8s'}}></div>
         
-        {/* Drifting particles */}
-        <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-red-400 rounded-full opacity-40 animate-drift" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/5 w-1 h-1 bg-white rounded-full opacity-60 animate-drift" style={{animationDelay: '4s'}}></div>
-        <div className="absolute bottom-1/3 right-1/5 w-3 h-3 bg-red-300 rounded-full opacity-30 animate-drift" style={{animationDelay: '6s'}}></div>
+        {/* Floating diamonds */}
+        <div className="floating-element floating-diamond top-1/5 right-1/3 animate-float-diamond opacity-30" style={{animationDelay: '1.5s'}}></div>
+        <div className="floating-element floating-diamond bottom-1/3 left-1/3 animate-float-diamond opacity-25" style={{animationDelay: '3.5s'}}></div>
+        <div className="floating-element floating-diamond top-3/4 right-1/5 animate-float-diamond opacity-32" style={{animationDelay: '5.5s'}}></div>
+        
+        {/* Drifting particles - more of them */}
+        <div className="absolute top-1/4 right-1/3 w-3 h-3 bg-red-400 rounded-full opacity-40 animate-drift shadow-lg shadow-red-400/50" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/5 w-2 h-2 bg-white rounded-full opacity-60 animate-drift shadow-md shadow-white/50" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-1/3 right-1/5 w-4 h-4 bg-red-300 rounded-full opacity-30 animate-drift shadow-lg shadow-red-300/40" style={{animationDelay: '6s'}}></div>
+        <div className="absolute top-1/6 left-1/2 w-2 h-2 bg-red-500 rounded-full opacity-45 animate-drift shadow-md shadow-red-500/50" style={{animationDelay: '8s'}}></div>
+        <div className="absolute bottom-1/2 right-2/3 w-3 h-3 bg-red-200 rounded-full opacity-50 animate-drift shadow-lg shadow-red-200/40" style={{animationDelay: '10s'}}></div>
+        
+        {/* Static pulsing elements */}
+        <div className="absolute top-1/5 left-1/4 w-2 h-2 bg-red-400 rounded-full animate-pulse opacity-50 shadow-md shadow-red-400/50"></div>
+        <div className="absolute top-2/3 right-1/6 w-3 h-3 bg-white rounded-full animate-pulse opacity-40 shadow-lg shadow-white/50"></div>
+        <div className="absolute bottom-1/5 left-1/3 w-2 h-2 bg-red-500 rounded-full animate-pulse opacity-60 shadow-md shadow-red-500/50"></div>
+        <div className="absolute top-1/2 right-1/2 w-1 h-1 bg-red-300 rounded-full animate-pulse opacity-35 shadow-sm shadow-red-300/40"></div>
       </div>
 
       {/* AI Processing Section */}

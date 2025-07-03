@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,18 +55,19 @@
   body {
     @apply text-white;
     background: linear-gradient(135deg, 
-      #2C0A0A 0%,     /* Very dark red */
-      #4A1515 15%,    /* Dark burgundy */
-      #6B2020 30%,    /* Medium dark red */
-      #8B2A2A 45%,    /* Muted red */
-      #A63A3A 60%,    /* Soft red */
-      #8B2A2A 75%,    /* Muted red */
-      #4A1515 90%,    /* Dark burgundy */
-      #2C0A0A 100%    /* Very dark red */
+      #1a0707 0%,     /* Deep dark red */
+      #2d1010 15%,    /* Dark burgundy */
+      #4a1515 30%,    /* Medium dark red */
+      #5a1a1a 45%,    /* Muted red */
+      #6b2020 60%,    /* Soft red */
+      #5a1a1a 75%,    /* Muted red */
+      #2d1010 90%,    /* Dark burgundy */
+      #1a0707 100%    /* Deep dark red */
     );
     min-height: 100vh;
     position: relative;
     font-weight: 500;
+    overflow-x: hidden;
   }
 
   body::before {
@@ -78,12 +78,35 @@
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 35%),
-      radial-gradient(circle at 40% 80%, rgba(220, 20, 60, 0.15) 0%, transparent 45%),
-      radial-gradient(circle at 60% 20%, rgba(139, 42, 42, 0.12) 0%, transparent 50%);
+      radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.06) 0%, transparent 35%),
+      radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.04) 0%, transparent 30%),
+      radial-gradient(circle at 35% 85%, rgba(220, 20, 60, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 65% 15%, rgba(139, 42, 42, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
     pointer-events: none;
     z-index: -1;
+  }
+
+  /* Global floating particles */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(220, 20, 60, 0.4), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.5), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(139, 42, 42, 0.3), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 15s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.7;
   }
 
   /* Custom scrollbar */
@@ -225,7 +248,7 @@
       0 4px 12px rgba(220, 20, 60, 0.15);
   }
 
-  /* Floating elements */
+  /* Enhanced floating elements */
   .floating-element {
     position: absolute;
     pointer-events: none;
@@ -236,6 +259,13 @@
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .floating-circle-glow {
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(220, 20, 60, 0.15) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+    animation: float-glow 10s ease-in-out infinite;
   }
 
   .floating-square {
@@ -252,6 +282,14 @@
     border-bottom: 35px solid rgba(255, 255, 255, 0.08);
     animation: float-fast 4s ease-in-out infinite;
   }
+
+  .floating-diamond {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(220, 20, 60, 0.1));
+    transform: rotate(45deg);
+    animation: float-diamond 7s ease-in-out infinite;
+  }
 }
 
 @layer utilities {
@@ -265,6 +303,25 @@
   @keyframes shimmer {
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
+  }
+
+  @keyframes sparkle {
+    0%, 100% { 
+      transform: translateY(0px) translateX(0px);
+      opacity: 0.7;
+    }
+    25% { 
+      transform: translateY(-5px) translateX(5px);
+      opacity: 1;
+    }
+    50% { 
+      transform: translateY(-10px) translateX(-3px);
+      opacity: 0.8;
+    }
+    75% { 
+      transform: translateY(-3px) translateX(8px);
+      opacity: 0.9;
+    }
   }
 
   @keyframes float {
@@ -288,6 +345,48 @@
   @keyframes float-fast {
     0%, 100% { transform: translateY(0px) translateX(0px); }
     50% { transform: translateY(-25px) translateX(15px); }
+  }
+
+  @keyframes float-glow {
+    0%, 100% { 
+      transform: translateY(0px) translateX(0px) scale(1);
+      opacity: 0.6;
+      box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+    }
+    25% { 
+      transform: translateY(-20px) translateX(15px) scale(1.1);
+      opacity: 0.8;
+      box-shadow: 0 0 30px rgba(220, 20, 60, 0.5);
+    }
+    50% { 
+      transform: translateY(-10px) translateX(-8px) scale(0.9);
+      opacity: 0.7;
+      box-shadow: 0 0 25px rgba(220, 20, 60, 0.4);
+    }
+    75% { 
+      transform: translateY(-25px) translateX(12px) scale(1.05);
+      opacity: 0.9;
+      box-shadow: 0 0 35px rgba(220, 20, 60, 0.6);
+    }
+  }
+
+  @keyframes float-diamond {
+    0%, 100% { 
+      transform: rotate(45deg) translateY(0px) translateX(0px);
+      opacity: 0.5;
+    }
+    25% { 
+      transform: rotate(90deg) translateY(-18px) translateX(12px);
+      opacity: 0.8;
+    }
+    50% { 
+      transform: rotate(135deg) translateY(-8px) translateX(-6px);
+      opacity: 0.6;
+    }
+    75% { 
+      transform: rotate(180deg) translateY(-22px) translateX(10px);
+      opacity: 0.9;
+    }
   }
 
   @keyframes glow {
@@ -324,6 +423,14 @@
     animation: float-fast 4s ease-in-out infinite;
   }
 
+  .animate-float-glow {
+    animation: float-glow 10s ease-in-out infinite;
+  }
+
+  .animate-float-diamond {
+    animation: float-diamond 7s ease-in-out infinite;
+  }
+
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
@@ -334,5 +441,9 @@
 
   .animate-drift {
     animation: drift 12s ease-in-out infinite;
+  }
+
+  .animate-sparkle {
+    animation: sparkle 15s linear infinite;
   }
 }
