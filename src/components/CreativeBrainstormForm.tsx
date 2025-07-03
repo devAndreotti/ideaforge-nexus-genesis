@@ -231,6 +231,31 @@ Desenvolva:
 Forneça código limpo, comentado e seguindo boas práticas de C# e Unity."
 
 ═══════════════════════════════════════
+🧠 PROMPT PARA GROK AI
+═══════════════════════════════════════
+
+"Desenvolva um jogo ${formData.genre} completo em Unity:
+
+🎮 CONCEITO: ${formData.story}
+📐 PERSPECTIVA: ${formData.perspective}  
+⚙️ ELEMENTOS: ${formData.elements}
+🎯 OBJETIVO: ${formData.purpose}
+
+Referências: ${formData.references}
+
+Crie uma arquitetura robusta incluindo:
+- GameManager com padrão Singleton
+- PlayerController otimizado para ${formData.perspective}
+- Sistema de inventário escalável
+- IA comportamental avançada
+- Sistema de eventos desacoplado
+- Gerenciamento de recursos eficiente
+- UI responsiva e acessível
+
+Utilize padrões como Observer, State Machine, Object Pooling.
+Código deve ser modular, performático e bem documentado."
+
+═══════════════════════════════════════
 ⚡ PROMPT PARA MANUS IA
 ═══════════════════════════════════════
 
@@ -268,6 +293,29 @@ ARQUITETURA: MVC adaptado para jogos
 - Performance para dispositivos de baixo custo
 - UI adaptativa para diferentes resoluções
 - Sistema de salvamento em nuvem (opcional)
+
+═══════════════════════════════════════
+🚀 PROMPT ESPECÍFICO GROK - AVANÇADO
+═══════════════════════════════════════
+
+"Grok, preciso de um sistema de jogo ${formData.genre} inovador:
+
+LORE: ${formData.story}
+MECÂNICAS: ${formData.elements}
+VISÃO: ${formData.perspective}
+META: ${formData.purpose}
+
+Desenvolva:
+1. Arquitetura hexagonal para jogos
+2. Sistema de componentes ECS (Entity Component System)
+3. Shader customizados para efeitos visuais
+4. Algoritmos de IA procedural
+5. Sistema de networking para multiplayer
+6. Pipeline de assets automatizado
+7. Testes unitários e integração
+
+Foque em performance, escalabilidade e manutenibilidade.
+Use C# 9+ features e Unity 2023+ APIs."
     `;
 
     downloadFile('prompts_codigo.txt', prompt);
@@ -625,37 +673,37 @@ Um ${formData.genre} que combina o melhor de ${formData.references} com inovaç�
               <Button
                 onClick={generateDocumentation}
                 variant="outline"
-                className="flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/10"
+                className="group flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/20 hover:border-creative-red-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-creative-red-500/25 hover:scale-105"
               >
-                <FileText className="w-4 h-4" />
-                Documentação
+                <FileText className="w-4 h-4 group-hover:text-creative-red-400 transition-colors duration-300" />
+                <span className="group-hover:text-white transition-colors duration-300">Documentação</span>
               </Button>
 
               <Button
                 onClick={generateImagePrompt}
                 variant="outline"
-                className="flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/10"
+                className="group flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/20 hover:border-creative-red-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-creative-red-500/25 hover:scale-105"
               >
-                <Sparkles className="w-4 h-4" />
-                Prompts de Imagem
+                <Sparkles className="w-4 h-4 group-hover:text-creative-red-400 transition-colors duration-300 group-hover:animate-pulse" />
+                <span className="group-hover:text-white transition-colors duration-300">Prompts de Imagem</span>
               </Button>
 
               <Button
                 onClick={generateCodePrompt}
                 variant="outline"
-                className="flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/10"
+                className="group flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/20 hover:border-creative-red-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-creative-red-500/25 hover:scale-105"
               >
-                <Code className="w-4 h-4" />
-                Prompts de Código
+                <Code className="w-4 h-4 group-hover:text-creative-red-400 transition-colors duration-300" />
+                <span className="group-hover:text-white transition-colors duration-300">Prompts de Código</span>
               </Button>
 
               <Button
                 onClick={generateFolderStructure}
                 variant="outline"
-                className="flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/10"
+                className="group flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/20 hover:border-creative-red-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-creative-red-500/25 hover:scale-105"
               >
-                <Folder className="w-4 h-4" />
-                Estrutura do Projeto
+                <Folder className="w-4 h-4 group-hover:text-creative-red-400 transition-colors duration-300" />
+                <span className="group-hover:text-white transition-colors duration-300">Estrutura do Projeto</span>
               </Button>
             </div>
 
@@ -663,10 +711,10 @@ Um ${formData.genre} que combina o melhor de ${formData.references} com inovaç�
               <Button
                 onClick={generatePitch}
                 variant="outline"
-                className="flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/10 creative-gradient text-white"
+                className="group flex items-center gap-2 hover-lift border-creative-red-500/30 hover:bg-creative-red-500/10 creative-gradient text-white hover:shadow-xl hover:shadow-creative-red-500/30 hover:scale-110 transition-all duration-300"
               >
-                <Megaphone className="w-4 h-4" />
-                Pitch Comercial Completo
+                <Megaphone className="w-4 h-4 group-hover:animate-bounce" />
+                <span className="font-semibold">Pitch Comercial Completo</span>
               </Button>
             </div>
           </CardContent>
