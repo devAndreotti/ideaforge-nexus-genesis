@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -539,15 +538,99 @@ Um ${formData.genre} que combina o melhor de ${formData.references} com inovaç�
                 <SelectTrigger className="bg-background/50 border-creative-red-500/30">
                   <SelectValue placeholder="Selecione o gênero" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border-creative-red-500/30">
-                  <SelectItem value="acao-futurista">Ação Futurista</SelectItem>
-                  <SelectItem value="terror-psicologico">Terror Psicológico</SelectItem>
-                  <SelectItem value="fantasia-medieval">Fantasia Medieval</SelectItem>
-                  <SelectItem value="ficcao-cientifica">Ficção Científica</SelectItem>
-                  <SelectItem value="aventura-exploracaco">Aventura/Exploração</SelectItem>
-                  <SelectItem value="rpg-narrativo">RPG Narrativo</SelectItem>
-                  <SelectItem value="survival-horror">Survival Horror</SelectItem>
-                  <SelectItem value="cyberpunk">Cyberpunk</SelectItem>
+                <SelectContent className="bg-background border-creative-red-500/30 max-h-60">
+                  {/* AÇÃO & AVENTURA */}
+                  <SelectItem value="acao-futurista">🚀 Ação Futurista</SelectItem>
+                  <SelectItem value="acao-militar">⚔️ Ação Militar</SelectItem>
+                  <SelectItem value="aventura-exploracaco">🗺️ Aventura/Exploração</SelectItem>
+                  <SelectItem value="aventura-pirata">🏴‍☠️ Aventura Pirata</SelectItem>
+                  <SelectItem value="aventura-espacial">🌌 Aventura Espacial</SelectItem>
+                  <SelectItem value="survival-extremo">🏔️ Survival Extremo</SelectItem>
+                  <SelectItem value="survival-horror">👻 Survival Horror</SelectItem>
+                  <SelectItem value="survival-zombies">🧟 Survival Zumbis</SelectItem>
+                  
+                  {/* FANTASIA */}
+                  <SelectItem value="fantasia-medieval">🏰 Fantasia Medieval</SelectItem>
+                  <SelectItem value="fantasia-urbana">🌃 Fantasia Urbana</SelectItem>
+                  <SelectItem value="fantasia-dark">🌑 Dark Fantasy</SelectItem>
+                  <SelectItem value="fantasia-nordica">❄️ Fantasia Nórdica</SelectItem>
+                  <SelectItem value="fantasia-oriental">🏮 Fantasia Oriental</SelectItem>
+                  <SelectItem value="fantasia-steam">⚙️ Steampunk Fantasy</SelectItem>
+                  <SelectItem value="fantasia-tribal">🗿 Fantasia Tribal</SelectItem>
+                  <SelectItem value="mitologia-grega">🏛️ Mitologia Grega</SelectItem>
+                  <SelectItem value="mitologia-nordica">🔨 Mitologia Nórdica</SelectItem>
+                  <SelectItem value="mitologia-egipcia">🔺 Mitologia Egípcia</SelectItem>
+                  
+                  {/* FICÇÃO CIENTÍFICA */}
+                  <SelectItem value="ficcao-cientifica">🛸 Ficção Científica</SelectItem>
+                  <SelectItem value="cyberpunk">💾 Cyberpunk</SelectItem>
+                  <SelectItem value="space-opera">🌠 Space Opera</SelectItem>
+                  <SelectItem value="apocalipse-nuclear">☢️ Apocalipse Nuclear</SelectItem>
+                  <SelectItem value="distopia-futurista">🏙️ Distopia Futurista</SelectItem>
+                  <SelectItem value="colonizacao-espacial">🚀 Colonização Espacial</SelectItem>
+                  <SelectItem value="viagem-temporal">⏰ Viagem no Tempo</SelectItem>
+                  <SelectItem value="realidade-virtual">🥽 Realidade Virtual</SelectItem>
+                  <SelectItem value="ia-rebelde">🤖 IA Rebelde</SelectItem>
+                  
+                  {/* TERROR & SUSPENSE */}
+                  <SelectItem value="terror-psicologico">🧠 Terror Psicológico</SelectItem>
+                  <SelectItem value="terror-sobrenatural">👁️ Terror Sobrenatural</SelectItem>
+                  <SelectItem value="terror-cosmico">🌌 Terror Cósmico</SelectItem>
+                  <SelectItem value="terror-body-horror">🩸 Body Horror</SelectItem>
+                  <SelectItem value="mansao-assombrada">🏚️ Mansão Assombrada</SelectItem>
+                  <SelectItem value="culto-sombrio">🕯️ Culto Sombrio</SelectItem>
+                  <SelectItem value="hospital-abandonado">🏥 Hospital Abandonado</SelectItem>
+                  <SelectItem value="floresta-maldita">🌲 Floresta Maldita</SelectItem>
+                  
+                  {/* RPG & NARRATIVO */}
+                  <SelectItem value="rpg-narrativo">📖 RPG Narrativo</SelectItem>
+                  <SelectItem value="rpg-medieval">⚔️ RPG Medieval</SelectItem>
+                  <SelectItem value="rpg-japones">🎌 JRPG</SelectItem>
+                  <SelectItem value="rpg-western">🤠 RPG Western</SelectItem>
+                  <SelectItem value="life-simulation">🏠 Simulação de Vida</SelectItem>
+                  <SelectItem value="dating-sim">💕 Dating Simulator</SelectItem>
+                  <SelectItem value="visual-novel">📚 Visual Novel</SelectItem>
+                  
+                  {/* HISTÓRICO & CULTURAL */}
+                  <SelectItem value="historico-antigo">🏛️ Histórico Antigo</SelectItem>
+                  <SelectItem value="era-vitoriana">🎩 Era Vitoriana</SelectItem>
+                  <SelectItem value="wild-west">🌵 Velho Oeste</SelectItem>
+                  <SelectItem value="guerra-mundial">🪖 Guerra Mundial</SelectItem>
+                  <SelectItem value="samurai-feudal">⚔️ Japão Feudal</SelectItem>
+                  <SelectItem value="viking-nordico">⚡ Era Viking</SelectItem>
+                  <SelectItem value="renascimento">🎨 Renascimento</SelectItem>
+                  <SelectItem value="revolucao-francesa">🗽 Revolução Francesa</SelectItem>
+                  
+                  {/* EXPERIMENTAL & ARTÍSTICO */}
+                  <SelectItem value="surrealista">🎭 Surrealista</SelectItem>
+                  <SelectItem value="minimalista">⚪ Minimalista</SelectItem>
+                  <SelectItem value="abstrato">🎨 Abstrato</SelectItem>
+                  <SelectItem value="noir-detective">🕵️ Noir Detective</SelectItem>
+                  <SelectItem value="musical-interativo">🎵 Musical Interativo</SelectItem>
+                  <SelectItem value="poetico-experimental">📝 Poético Experimental</SelectItem>
+                  
+                  {/* INFANTIL & FAMÍLIA */}
+                  <SelectItem value="infantil-educativo">🧸 Infantil Educativo</SelectItem>
+                  <SelectItem value="conto-fadas">🧚 Conto de Fadas</SelectItem>
+                  <SelectItem value="animais-falantes">🐻 Animais Falantes</SelectItem>
+                  <SelectItem value="aventura-magica">✨ Aventura Mágica</SelectItem>
+                  
+                  {/* ESPORTES & COMPETIÇÃO */}
+                  <SelectItem value="esportes-futuristicos">🏆 Esportes Futurísticos</SelectItem>
+                  <SelectItem value="corrida-extrema">🏎️ Corrida Extrema</SelectItem>
+                  <SelectItem value="artes-marciais">🥋 Artes Marciais</SelectItem>
+                  <SelectItem value="gladiador-arena">⚔️ Gladiador Arena</SelectItem>
+                  
+                  {/* COMÉDIA & PARÓDIA */}
+                  <SelectItem value="comedia-absurda">😂 Comédia Absurda</SelectItem>
+                  <SelectItem value="parodia-jogos">🎮 Paródia de Jogos</SelectItem>
+                  <SelectItem value="sitcom-interativa">📺 Sitcom Interativa</SelectItem>
+                  
+                  {/* MISTÉRIO & INVESTIGAÇÃO */}
+                  <SelectItem value="detetive-criminal">🔍 Detetive Criminal</SelectItem>
+                  <SelectItem value="misterio-sobrenatural">👻 Mistério Sobrenatural</SelectItem>
+                  <SelectItem value="conspiracaco-global">🌍 Conspiração Global</SelectItem>
+                  <SelectItem value="arqueologia-mistica">🏺 Arqueologia Mística</SelectItem>
                 </SelectContent>
               </Select>
             </div>
