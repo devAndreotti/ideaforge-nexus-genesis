@@ -1,9 +1,9 @@
 # 🧠 IdeaForge Nexus - Gênesis Criativa
 <p align="center">
   <!-- Contador de linguagens -->
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/ideaforge-nexus-genesis?color=FFF&labelColor=561a1b&style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/my-first-vibe-coding-project?color=FFF&labelColor=41bfff&style=flat-square">
   <!-- Tamanho do repositório -->
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/devAndreotti/ideaforge-nexus-genesis?color=FFF&labelColor=561a1b&style=flat-square">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/devAndreotti/my-first-vibe-coding-project?color=FFF&labelColor=7d83ff&style=flat-square">
   <!-- Licença -->
   <img alt="GitHub License" src="https://img.shields.io/github/license/devAndreotti/devAndreotti?color=FFF&labelColor=561a1b&style=flat-square">
 </p>
