@@ -4,7 +4,7 @@ import { Sparkles, Zap, Target, Rocket } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 md:py-0">
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Large floating circles with glow */}
@@ -59,14 +59,14 @@ const HeroSection = () => {
         <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-white rounded-full animate-pulse opacity-65 shadow-lg shadow-white/50"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <div className="w-full max-w-6xl mx-auto px-6 text-center relative z-10">
         <div className="space-y-8">
           {/* Main Title */}
           <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-bold text-gradient animate-fade-in">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-gradient animate-fade-in">
               Brainstorm
             </h1>
-            <h2 className="text-4xl md:text-6xl font-bold text-white animate-fade-in" style={{animationDelay: '0.2s'}}>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white animate-fade-in" style={{animationDelay: '0.2s'}}>
               Criativo
             </h2>
             <div className="flex items-center justify-center gap-4 mt-6">
@@ -112,17 +112,17 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex justify-center items-center gap-12 mt-16 animate-fade-in" style={{animationDelay: '0.8s'}}>
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-6 md:gap-12 mt-16 animate-fade-in" style={{animationDelay: '0.8s'}}>
             <div className="text-center">
               <div className="text-3xl font-bold text-gradient">5+</div>
               <div className="text-sm text-red-300">Arquivos Gerados</div>
             </div>
-            <div className="w-px h-12 bg-red-500/30"></div>
+            <div className="hidden md:block w-px h-12 bg-red-500/30"></div>
             <div className="text-center">
               <div className="text-3xl font-bold text-gradient">100%</div>
               <div className="text-sm text-red-300">Pronto para Uso</div>
             </div>
-            <div className="w-px h-12 bg-red-500/30"></div>
+            <div className="hidden md:block w-px h-12 bg-red-500/30"></div>
             <div className="text-center">
               <div className="text-3xl font-bold text-gradient">∞</div>
               <div className="text-sm text-red-300">Possibilidades</div>
